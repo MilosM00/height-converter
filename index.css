@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.overlay{
+    padding-top: 100px;
+
+    display: grid;
+    place-items: center;
+}
+
+.box{
+    display: grid;
+    place-items: center;
+    width: 500px;
+    height: 350px;
+
+    background: linear-gradient(to right, #32de84, #00FA9A);
+    box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.change{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    border: 1px solid rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.inline{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.m, 
+.ft,
+.cm, 
+.in,
+.m-2, 
+.ft-2,
+.cm-2, 
+.in-2{
+    width: 200px;
+    padding: 15px;
+    font-size: 17px;
+    font-family: sans-serif;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.m:focus,
+.ft:focus,
+.cm:focus,
+.in:focus,
+.m-2:focus,
+.ft-2:focus,
+.cm-2:focus,
+.in-2:focus{
+    outline: none;
+}
+
+.m::placeholder,
+.ft::placeholder,
+.cm::placeholder,
+.in::placeholder,
+.m-2::placeholder,
+.ft-2::placeholder,
+.cm-2::placeholder,
+.in-2::placeholder{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.m,
+.cm,
+.ft-2,
+.in-2{
+    margin-right: 20px;
+}
+
+.convert{
+    padding: 10px 20px;
+    border: none;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.hidden-1,
+.hidden-2{
+    display: none;
+}
