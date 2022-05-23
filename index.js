@@ -1,7 +1,7 @@
 "use strict";
 
 
-const buttonChangeOne = document.querySelector(`.change`);
+const buttonChange = document.querySelector(`.change`);
 const buttonConvert = document.querySelector(`.convert`);
 const inputMeter = document.querySelector(`.m`);
 const inputCentimeter = document.querySelector(`.cm`);
@@ -19,7 +19,7 @@ let isChange = true;
 
 overlayOne.classList.remove(`hidden-1`);
 
-buttonChangeOne.addEventListener(`click`, () =>{
+buttonChange.addEventListener(`click`, () =>{
     if(isChange === true){
         overlayTwo.classList.remove(`hidden-2`);
         overlayOne.classList.add(`hidden-1`);
@@ -41,4 +41,32 @@ buttonChangeOne.addEventListener(`click`, () =>{
     }
 
     isChange = !isChange;
+});
+
+buttonConvert.addEventListener(`click`, () =>{
+    if(isChange === true){
+
+        if(inputMeter.value.length !== 0 && inputMeter.value > 0){
+            inputFeet.value = inputMeter.value * 3.3;
+        }
+
+
+        if(inputCentimeter.value.length !== 0 && inputCentimeter.value > 0){
+            inputInch.value = inputCentimeter.value / 2.5;
+        }
+
+    }
+
+    else if(isChange === false){
+
+        if(inputFeetTwo.value.length !== 0 && inputFeetTwo.value > 0){
+            inputMeterTwo.value = inputFeetTwo.value / 3.3;
+        }
+
+        
+        if(inputInchTwo.value.length !== 0 && inputInchTwo.value > 0){
+            inputCentimeterTwo.value = inputInchTwo.value * 2.5;
+        }
+
+    }
 });
