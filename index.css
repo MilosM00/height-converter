@@ -81,11 +81,12 @@
     font-weight: 500;
 }
 
-.m,
-.cm,
-.ft-2,
-.in-2{
-    margin-right: 20px;
+.m-2,
+.cm-2,
+.ft,
+.in{
+    margin-left: 20px;
+    cursor: default;
 }
 
 .convert{
@@ -102,4 +103,21 @@
 .hidden-1,
 .hidden-2{
     display: none;
+}
+
+@media (max-width: 499px) {
+    .box{
+        width: 300px;
+    }
+
+    .m, 
+    .ft,
+    .cm, 
+    .in,
+    .m-2, 
+    .ft-2,
+    .cm-2, 
+    .in-2{
+        width: 120px;
+    }
 }
